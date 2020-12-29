@@ -1,0 +1,26 @@
+
+.carousel-item{
+height:700px;
+background:black;
+}
+.carousel-caption{
+  padding-bottom:250px !important;
+}
+.fas{
+font-size:80px;
+}
+
+.font1{
+font-size:50px;
+}
+@media only screen and (max-width:700px){
+.carousel-item{
+height:650px;
+}
+.carousel-caption{
+  padding-bottom:200px !important;
+}
+.text{
+
+}
+}
