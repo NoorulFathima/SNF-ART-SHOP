@@ -4,118 +4,21 @@
 <section>
         <div class="container pt-5">
             <div class="row py-3">
+                {% for product in products %}
                 <div class="col-md-6 col-lg-4">
                     <div class="card card-border-0">
-                    <img class="img-fluid size" src="{% static 'pic/nature.jpg'%}">
+                    <img class="img-fluid size w-100" src="{{ product.picUrl }}">
                         <div class="card-body">
-                            <h4>Nature</h4>
+                            <h4>{{ product.name }}</h4>
                             <hr>
-                            <button class="btn btn-outline-primary add-btn">Add to cart</button>
+                            <button data-product={{product.id}} data-action="add"
+                                    class="btn btn-outline-primary add-btn update-cart">Add to cart</button>
                             <button class="btn btn-outline-danger add-btn">Like</button>
-                            <p style="display:inline-block; float:right; ">Price $20</p>
+                            <p style="display:inline-block; float:right; ">Price ${{ product.price|floatformat:2 }}</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card card-border-0">
-                    <img class="img-fluid size" src="{% static 'pic/dynoo.jpg'%}">
-                        <div class="card-body">
-                            <h4>Dinosaur</h4>
-                            <hr>
-                            <button class="btn btn-outline-primary add-btn">Add to cart</button>
-                            <button class="btn btn-outline-danger add-btn">Like</button>
-                            <p style="display:inline-block; float:right; ">Price $20</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card card-border-0">
-                    <img class="img-fluid size" src="{% static 'pic/boy.jpg'%}">
-                        <div class="card-body">
-                            <h4>Boy</h4>
-                            <hr>
-                            <button class="btn btn-outline-primary add-btn">Add to cart</button>
-                            <button class="btn btn-outline-danger add-btn">Like</button>
-                            <p style="display:inline-block; float:right; ">Price $20</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row py-3">
-                <div class="col-md-6 col-lg-4">
-                    <div class="card card-border-0">
-                    <img class="img-fluid size" src="{% static 'pic/window.jpg'%}">
-                        <div class="card-body">
-                            <h4>Window</h4>
-                            <hr>
-                            <button class="btn btn-outline-primary add-btn">Add to cart</button>
-                            <button class="btn btn-outline-danger add-btn">Like</button>
-                            <p style="display:inline-block; float:right; ">Price $20</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card card-border-0">
-                    <img class="img-fluid size" src="{% static 'pic/face.jpg'%}">
-                        <div class="card-body">
-                            <h4>Face</h4>
-                            <hr>
-                            <button class="btn btn-outline-primary add-btn">Add to cart</button>
-                            <button class="btn btn-outline-danger add-btn">Like</button>
-                            <p style="display:inline-block; float:right; ">Price $20</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card card-border-0">
-                    <img class="img-fluid size" src="{% static 'pic/paris.jpg'%}">
-                        <div class="card-body">
-                            <h4>Paris</h4>
-                            <hr>
-                            <button class="btn btn-outline-primary add-btn">Add to cart</button>
-                            <button class="btn btn-outline-danger add-btn">Like</button>
-                            <p style="display:inline-block; float:right; ">Price $20</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row py-3">
-                <div class="col-md-6 col-lg-4">
-                    <div class="card card-border-0">
-                    <img class="img-fluid size" src="{% static 'pic/shoe.jpg'%}">
-                        <div class="card-body">
-                            <h4>Shoe</h4>
-                            <hr>
-                            <button class="btn btn-outline-primary add-btn">Add to cart</button>
-                            <button class="btn btn-outline-danger add-btn">Like</button>
-                            <p style="display:inline-block; float:right; ">Price $20</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card card-border-0">
-                    <img class="img-fluid size" src="{% static 'pic/girl.jpg'%}">
-                        <div class="card-body">
-                            <h4>Girl</h4>
-                            <hr>
-                            <button class="btn btn-outline-primary add-btn">Add to cart</button>
-                            <button class="btn btn-outline-danger add-btn">Like</button>
-                            <p style="display:inline-block; float:right; ">Price $20</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card card-border-0">
-                    <img class="img-fluid size" src="{% static 'pic/tower.jpg'%}">
-                        <div class="card-body">
-                            <h4>Tower</h4>
-                            <hr>
-                            <button class="btn btn-outline-primary add-btn">Add to cart</button>
-                            <button class="btn btn-outline-danger add-btn">Like</button>
-                            <p style="display:inline-block; float:right; ">Price $20</p>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>

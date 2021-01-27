@@ -9,18 +9,24 @@ background:black;
 .fas{
 font-size:80px;
 }
-
-.font1{
-font-size:50px;
+.box-element{
+box-shadow:5px 5px 5px #f2f2f2;
+background-color:white;
+border-radius:5x;
+padding:10px;
 }
+.float{
+float:right;
+}
+.size{
+width:20px;
+}
+
 @media only screen and (max-width:700px){
 .carousel-item{
 height:650px;
 }
 .carousel-caption{
   padding-bottom:200px !important;
-}
-.text{
-
 }
 }
